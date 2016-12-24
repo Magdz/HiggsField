@@ -1,0 +1,152 @@
+/*External font import*/
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+body{
+    width: 75%;
+    height: 100%;
+}
+/*
+*=== Background Style ===
+*/
+#body-bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -20px;
+    left: -34px;
+}
+#body-bg img{
+    position: absolute;
+    width: 1400px;
+}
+#body-overlay{
+    position: absolute;
+    height: 682px;
+    width: 100%;
+    top: -20px;
+    background-color: rgba(0,0,0,0.3);
+}
+/*
+*===Landing Text Style===
+*/
+#header-title{
+    top: 220px;
+    left: 60px;
+    width: 600px;
+    position: relative;
+}
+#header-title h1,h2{
+    font-family: 'Fira Sans','Helvetica', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+#header-title-2{
+    margin-top:-20px;  
+}
+/*USER ACTION BOX*/
+#header-signupbox{
+    position: relative;
+    top: -40px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 440px;
+    width: 500px;
+    margin-left: 740px;
+    background-color: rgb(245,248,250);
+}
+ul.tab{
+    width: 500px;
+    padding-left:0;
+    list-style-type: none;
+    margin-top: -50px;
+    margin-left: -50px;
+    position: relative;
+    overflow:hidden;
+    border: 1px solid #fff;
+    box-shadow: 0px 3px #e9ebed;
+}
+ul.tab li
+{
+    text-align: center;
+    float: left;
+    width: 249px;
+    height: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-family: 'Fira Sans','Helvetica', sans-serif;
+    font-weight: bold;
+}
+ul.tab li a {
+
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+    display: block;
+}
+#signupContainer{
+    top: 20px;
+}
+#signupContainer input[type=text], #signinContainer input[type=text]
+{
+    border: 2px solid #d3dadf;
+    padding-left: 10px;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 365px;
+    height: 40px;
+}
+#signinContainer {
+    padding-top: 50px;
+}
+#signinContainer input[type=text]
+{
+    margin-top: 20px;
+}
+#signupContainer input[type=submit], #signinContainer input[type=submit]
+{
+    background-color: #55acee;   
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    width: 365px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#signinContainer input[type=submit]{
+    margin-top: 20px;
+}
+.selected
+{
+    border-bottom: 3px solid #55acee;
+}
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
