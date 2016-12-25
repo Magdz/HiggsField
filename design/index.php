@@ -18,18 +18,6 @@
         <link rel="stylesheet" href="css/index.css">
         <!-- Page Title -->
         <title>HiggsField</title>
-        
-        <!-- Page Scripts -->
-        <!-- Page Scroll Script -->
-        <script>
-            $(document).ready(function (){
-                $("#click").click(function (){
-                    $('html, body').animate({
-                        scrollTop: $("#signupSection").offset().top
-                    }, 700);
-                });
-            });
-        </script>
     </head>
     
     <!--BODY SECTION-->
@@ -64,9 +52,10 @@
                     <form id = "signup" method="" class="" action="">
                         <input type = "text" placeholder = "First Name"></input><br>
                         <input type = "text" placeholder = "Last Name"></input><br>
-                        <input type = "text" placeholder = "Nickname"></input> <br>
+                        <input type = "text" placeholder = "Gender"></input> <br>
                         <input type = "text" placeholder = "Password"></input> <br>
                         <input type = "text" placeholder = "Email"></input><br>
+                        <input type = "date" placeholder = "Birth Date" style="color:#A9B0C4"></input><br>
                         <input type = "submit" value = "Sign up">
                     </form>                
                 </div>
