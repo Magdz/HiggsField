@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,7 +20,7 @@
         <div id= "pageContainer">
         </div>
 
-    <!--FIXED NAVIGATION BAR--> 
+        <!--FIXED NAVIGATION BAR--> 
         <nav class="navbar navbar-default">
             <div class="container-fluid" id="navigation-fixed">
                 <div class="navbar-header">

@@ -29,10 +29,6 @@
 #links-bar li a{
     color:#353739;
 }
-.white-box{
-    background-color:white;
-    box-shadow: 1px 1px 0px 1px rgba(79,79,79,0.1);
-}
 #user-info-box{
     position:absolute;
     width: 280px;
@@ -45,7 +41,7 @@
     border-radius: 100px;
     width: 100px;
     height:100px;
-    background: dodgerblue;
+    background: #6ed3cf;
     text-align: center;
     margin:auto;
     border: 1px solid white;

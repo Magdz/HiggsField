@@ -111,7 +111,7 @@ ul.tab li a {
 }
 #signupContainer input[type=submit], #signinContainer input[type=submit]
 {
-    background-color: #55acee;   
+    background-color: #6ed3cf;   
     color: #fff;
     text-transform: uppercase;
     border: none;
@@ -125,7 +125,7 @@ ul.tab li a {
 }
 .selected
 {
-    border-bottom: 3px solid #55acee;
+    border-bottom: 3px solid #6ed3cf;
 }
 .hide{
     display:none;

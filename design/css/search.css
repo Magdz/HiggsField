@@ -1,0 +1,17 @@
+#filter-search input[type="text"]{
+    border: 1px solid #e3e3e3;
+    color: #b3b5b7;
+    border-radius: 4px;
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+    background-color:#fdfdfd;
+}
+#filter-search input[type="submit"]{
+    background-color: #691A99;   
+    color: #e6e6e8;
+    border-style: none;
+    width: 250px;
+    height:40px;
+    font-size: 15px;
+}
