@@ -1,0 +1,51 @@
+#request-wrapper{
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto;
+}
+#request-wrapper::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 2px;
+}
+
+#request-wrapper::-webkit-scrollbar
+{
+    height: 7px;
+}
+
+#request-wrapper::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+.request, .friend{
+    background: #fff;
+    box-shadow: 1px 1px 0px 1px rgba(79,79,79,0.1);
+    float:left;
+    margin-left: 20px;
+    width: 200px;
+    height:180px;
+    padding: 0px;
+}
+.friend {
+    margin-bottom:20px;
+    margin-left:55px;
+}
+#request-wrapper>div {
+    width: 600em;
+}
+.request:first-of-type {
+    margin-left: 0;
+}
+.request input[type="submit"], .friend input[type="submit"]{
+    background-color: #691A99;   
+    color: #e6e6e8;
+    border-style: none;
+    width: 200px;
+    height:30px;
+    font-size: 15px;
+}
