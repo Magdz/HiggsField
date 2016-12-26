@@ -4,7 +4,6 @@ body{
     width: 75%;
     height: 100%;
 }
-
 /*
 *=== Background Style ===
 */
@@ -52,7 +51,7 @@ body{
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    height: 500px;
+    height: 440px;
     width: 500px;
     margin-left: 740px;
     background-color: rgb(245,248,250);
@@ -93,7 +92,7 @@ ul.tab li a {
 #signupContainer{
     top: 20px;
 }
-#signupContainer input[type=text], #signinContainer input[type=text],#signupContainer input[type=date]
+#signupContainer input[type=text], #signinContainer input[type=text]
 {
     border: 2px solid #d3dadf;
     padding-left: 10px;

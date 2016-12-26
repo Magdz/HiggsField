@@ -1,0 +1,24 @@
+body{
+    background-color: #f7f8f9;
+}
+.navbar-brand{
+    margin-bottom: 0px;
+    border:none;
+}
+.navbar-default .navbar-brand{
+    color: white;
+    
+}
+.navbar-default .navbar-brand:hover{
+    color: #e1e8f0;    
+}
+.navbar{
+    margin-bottom: 0px;
+    border:none;
+}   
+#pageContainer{
+    position: absolute;
+    background-color: #f7f8f9;
+    padding-top: 100px;
+    padding-left: 150px;
+}
