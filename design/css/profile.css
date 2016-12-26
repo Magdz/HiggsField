@@ -1,0 +1,138 @@
+.container{
+    width:80%;
+}
+#links-bar{
+    padding-left:360px;
+    position: relative;
+    width: 100%;
+    height: 55px;
+    box-shadow: 4px 3px 0.5px 1px rgba(79,79,79,0.1);
+    margin-top: 0px;
+    text-align: center;
+}
+.h4{
+    font-family: 'Fira Sans','Helvetica', sans-serif;
+}
+#links-bar ul{
+    margin:auto;
+}
+#links-bar li{
+    list-style-type: none;
+    float: left;
+    padding-top:16px;
+    padding-left: 60px;
+    font-family: 'Fira Sans','Helvetica', sans-serif;
+    color: #191919;
+    font-weight:bold;
+    margin: auto;
+}
+#links-bar li a{
+    color:#353739;
+}
+.white-box{
+    background-color:white;
+    box-shadow: 1px 1px 0px 1px rgba(79,79,79,0.1);
+}
+#user-info-box{
+    position:absolute;
+    width: 280px;
+    height:350px;
+    margin-top: 50px;
+    text-align: center;
+}
+#profile-pic{
+    margin-top: 10px;
+    border-radius: 100px;
+    width: 100px;
+    height:100px;
+    background: dodgerblue;
+    text-align: center;
+    margin:auto;
+    border: 1px solid white;
+    box-shadow: 2px 2px rgba(79, 79, 79, 0.1);
+}
+#user-info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#connections{
+    margin-top: 5px;
+    text-align:center;
+}
+
+#status-update{
+    /*border: 4px solid rgba(79,79,79,0.05);*/
+    box-shadow: 1px 1px 0px 1px rgba(79,79,79,0.1);
+    background-color:white;
+    height: 250px;
+    width: 600px;
+    margin-top: 50px;
+    padding-left: 20px;
+}
+#status-txt{
+    border: none;
+    border-top:1px solid #eeeeee;
+    background-color: white;
+    margin-bottom: 10px;
+    resize:none;
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: grey;
+}
+#status-update input[type="submit"]{
+    border-style:none;
+    box-shadow:none;
+    background-color: #691A99;
+    color: white;
+    width: 80px;
+    height:30px;
+}
+.post-update{
+    background-color:white;
+    box-shadow: 1px 1px 0px 1px rgba(79,79,79,0.1);
+    height: 250px;
+    width: 600px;
+    position:relative;
+    margin-top:20px;
+    padding-left:20px;
+    margin-bottom: 20px;
+}
+.post-update #top{
+    padding-bottom:10px;
+    margin-bottom:5px;
+    border-bottom:1px solid #eeeeee;
+}
+#thumb-img{
+    margin-top: 10px;
+    border-radius: 100px;
+    width: 50px;
+    height:50px;
+    background: dodgerblue;
+    text-align: center;
+}
+#interaction{
+    border-top:1px solid #eeeeee;
+}
+#like-btn, #comment-btn{
+    background: url("../images/like-btn.png");
+    background-size: 25px;
+    height:30px; 
+    width:30px;
+    background-repeat: no-repeat;
+    margin-top: 10px; 
+    margin-left:35px;
+    float: left;
+    border:none;
+}
+#like-btn:focus,#comment-btn:focus {
+    outline:0px;
+}
+#comment-btn{
+    background: url("../images/comment-btn.png");
+    background-size: 25px;
+    margin-top: 10px; 
+    background-repeat:no-repeat;
+    position:relative;
+    margin-left:20px;
+    margin-top: 13px;
+}
