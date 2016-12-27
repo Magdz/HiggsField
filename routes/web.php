@@ -17,6 +17,10 @@ Route::group(['middleware' => 'guest'], function(){
 	    return view('index');
 	});
 
+	Route::get('/login', function (){
+		return view('index');
+	});
+
 	Route::post('/register', [
 		'as' => 'auth.register',
 		'uses' => 'Auth\RegisterController@register'
@@ -44,6 +48,11 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::post('/post/save', [
 		'as'=>'post.save',
 		'uses'=>'PostsController@save'
+	]);
+
+	Route::get('/friends', [
+		'as' => 'friends',
+		'uses' => 'FriendsController@index'
 	]);
 
 });

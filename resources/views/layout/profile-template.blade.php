@@ -24,7 +24,7 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid" id="navigation-fixed">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">HiggsField</a>
+                    <a class="navbar-brand" href="{!! route('home') !!}">HiggsField</a>
                 </div>
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
@@ -36,9 +36,9 @@
         </nav>
         <div id="links-bar">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="{!! route('home') !!}">Home</a></li>
                 <li><a href="#">Profile</a></li>
-                <li><a href="#">Friends</a></li>
+                <li><a href="{!! route('friends') !!}">Friends</a></li>
                 <li><a href="#">Settings</a></li>
             </ul>
         </div>

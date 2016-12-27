@@ -44,5 +44,13 @@ class User extends Authenticatable
     public function posts(){
         return $this->hasMany('App\Post', 'user_id');
     }
-    
+
+    public function friends(){
+        return $this->belongsToMany('App\User', 'friends_users', 'user_id', 'friend_id')->where('state', '1');
+    }
+
+    public function requests(){
+        return $this->belongsToMany('App\User', 'friends_users', 'user_id', 'friend_id')->where('state', '0');
+    }
+
 }
