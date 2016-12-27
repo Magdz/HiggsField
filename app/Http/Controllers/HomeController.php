@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index(){
     	$user_id = Auth::id();
-        $posts = Post::where('user_id', $user_id)->get();
+        $posts = Post::where('user_id', $user_id)->latest()->get();
     	return view('profile', compact('posts'));
     }
 

@@ -17,7 +17,13 @@ class PostsController extends Controller
     	$this->validate($request, $rules);
 
     	$data = $request->all();
-    	$data['is_public'] = 1;
+    	if (isset($data['is_public']))
+    		$data['is_public']=1;
+    	else
+    		$data['is_public']=0;
+
+
+
     	$data['user_id'] = Auth::id();
 
     	Post::create($data);
