@@ -1,3 +1,6 @@
+.container{
+    width:80%;
+}
 #filter-search input[type="text"]{
     border: 1px solid #e3e3e3;
     color: #b3b5b7;
