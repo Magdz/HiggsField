@@ -65,6 +65,11 @@ Route::group(['middleware' => 'auth'], function(){
 		'uses'=>'PostsController@save'
 	]);
 
+	Route::post('/post/delete', [
+		'as'=>'post.delete',
+		'uses'=>'PostsController@delete(oid)'
+	]);
+
 	Route::get('/friends', [
 		'as' => 'friends',
 		'uses' => 'FriendsController@index'
