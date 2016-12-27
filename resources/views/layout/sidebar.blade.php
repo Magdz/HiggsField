@@ -2,8 +2,12 @@
         <div id="pic-name" class="white-box row">
             <div id="user-info">
                 <!--Profile Picture-->
-                <div id = "profile-pic" class="white-box row"> 
-                    <img src="">
+                <div id = "profile-pic" class="white-box row">
+                    @if(Auth::user()->profile_picture)
+                        <img src="{{ Auth::user()->profile_picture }}">
+                    @else
+                        <img src="{{ URL::asset('/') }}images/default_profile.jpg">
+                    @endif
                 </div>
                 <!--User Information{Name, Nickname, Age, Gender}-->
                 
