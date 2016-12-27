@@ -13,7 +13,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
         <script src="http://malsup.github.com/jquery.form.js"></script>
     <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/continue.css">
+    <link rel="stylesheet" href="css/settings.css">
     
 </head>
 
@@ -35,8 +35,12 @@
     
     <div id = "pageContainer" class = "row">
         <div id = "leftpane" class = "col-sm-6">
+            <ul class = "tab">
+                        <li id="required-li" > <a href="#"> Required </a></li>
+                        <li id="optional-li" class="selected"> <a href="#"> Optional </a></li>
+            </ul>
             <h4 style="color:white;">Your profile is a few clicks away... </h4>
-            <form>
+            <form id = "optional" class = "show">
                 <input type = "text" class = "inputStyle" placeholder = "Nickname"></input><br>
                 <input type = "text" class = "inputStyle" placeholder = "Phone Number"></input><br>
                 <input type = "text" class = "inputStyle" placeholder = "Hometown" ></input><br>
@@ -48,12 +52,20 @@
                 </select>
                 <textarea class = "inputStyle" style = "height:70px" placeholder = "Biography" rows= "4" cols= "50"></textarea> <br>
             </form>
+            <form id = "required" method="" class="hide" action="">
+                    <input class= "inputStyle" type = "text" placeholder = "First Name"></input><br>
+                    <input class= "inputStyle" type = "text" placeholder = "Last Name"></input><br>
+                    <input class= "inputStyle" type = "text" placeholder = "Gender"></input> <br>
+                    <input class= "inputStyle" type = "text" placeholder = "Password"></input> <br>
+                    <input class= "inputStyle" type = "text" placeholder = "Email"></input><br>
+                    <input class= "inputStyle" type = "date" placeholder = "Birth Date" style="color:#A9B0C4"></input><br>
+            </form>  
             <div class = "bottom-btns">
                 <a href="#" style="font-size:14px; text-decoration: underline;">Later</a>
             <input class= "addPic2" style= "border: 2px solid #6ed3cf; margin-left:349px"type="submit" value = "Go">
-        </div>
-        </div>
-
+            </div>
+                          
+        </div>  
         <div id = "picturepane" class = "col-sm-6">
             <img class = "displayed" src="Images/default_profile.jpg"></img>
             <div id = "overlay-img">
@@ -64,5 +76,5 @@
 
     </div>
 </body>
-
+<script src="js/action.js"></script>
 </html>
