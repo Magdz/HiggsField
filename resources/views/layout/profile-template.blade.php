@@ -26,10 +26,11 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{!! route('home') !!}">HiggsField</a>
                 </div>
-                <form class="navbar-form navbar-left" role="search">
+                <form class="navbar-form navbar-left" role="search" method = "post" action="{!! route('search') !!}">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" name = "querydata" class="form-control" placeholder="Search">
                     </div>
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>

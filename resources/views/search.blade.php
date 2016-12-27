@@ -35,38 +35,26 @@
                             </div>
                         </div>
                         <!--{Search Results}-->
-                        <!--RESULT 1-->
-                        <div class="row" id = "" style="margin-top: 20px; margin-bottom:20px; padding-bottom: 10px;">
-                            <div class="col-md-3" id = "user-pic" style="margin-left:20px;border-radius:60px; width:60px; height:60px; background-color:#6ed3cf;">
-                            </div>
-                            <div class="col-md-9" id = "user-info" style="float: left;border-bottom:1px solid #e3e3e3; padding-bottom: 40px; ">
-                                {First Last Name}<br>
-                                {Nickname}
-                                <input 
-                                type="submit" 
-                                value = "Send Request"
-                                style = "border-radius: 60px; height: 35px; width: 120px;
-                                margin-top: -15px;
-                                color: #691A99;
-                                background-color: transparent; float:right; border: 3px solid #691A99">
-                            </div>   
-                        </div>
+                        @foreach($result as $item)
                         <!--RESULT 2-->
                         <div class="row" id = "" style="margin-top: 20px; margin-bottom:20px; padding-bottom: 10px;">
                             <div class="col-md-3" id = "user-pic" style="margin-left:20px;border-radius:60px; width:60px; height:60px; background-color:#6ed3cf;">
                             </div>
                             <div class="col-md-9" id = "user-info" style="float: left;border-bottom:1px solid #e3e3e3; padding-bottom: 40px; ">
-                                {First Last Name}<br>
-                                {Nickname}
-                                <input 
-                                type="submit" 
-                                value = "Send Request"
-                                style = "border-radius: 60px; height: 35px; width: 120px;
-                                margin-top: -15px;
-                                color: #691A99;
-                                background-color: transparent; float:right; border: 3px solid #691A99">
+                                {{$item->firstname}} {{$item->lastname}}<br>
+                                {{$item->nickname}}
+                                @unless($item->id == Auth::id())
+                                    <input 
+                                    type="submit" 
+                                    value = "Send Request"
+                                    style = "border-radius: 60px; height: 35px; width: 120px;
+                                    margin-top: -15px;
+                                    color: #691A99;
+                                    background-color: transparent; float:right; border: 3px solid #691A99">
+                                @endunless
                             </div>   
                         </div>
+                        @endforeach
                      </div>
                 </div>
             </div>

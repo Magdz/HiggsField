@@ -69,5 +69,9 @@ Route::group(['middleware' => 'auth'], function(){
 		'as' => 'friends',
 		'uses' => 'FriendsController@index'
 	]);
-
+	
+	Route::post('/search',[
+		'as' => 'search',
+		'uses'=> 'SearchController@search'
+	]);
 });
