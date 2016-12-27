@@ -42,9 +42,10 @@
                     <li id="signup-li"> <a href="#"> Sign up </a></li>
                 </ul>
                 <div id="signinContainer" class="show">
-                    <form id = "signin" method="" class="" action="">
-                        <input type = "text" placeholder = "Username"></input><br>
-                        <input type = "text" placeholder = "Password"></input><br>
+                    <form id = "signin" method="post" class="" action="{!! route('auth.login') !!}">
+                        <input type = "email" name="email" placeholder = "Email"></input><br>
+                        <input type = "password" name="password" placeholder = "Password"></input><br>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type = "submit" value = "Sign in">
                     </form>
                 </div>
