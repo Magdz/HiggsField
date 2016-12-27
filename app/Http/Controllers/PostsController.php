@@ -30,5 +30,10 @@ class PostsController extends Controller
 
     	return redirect(route('home'));
     }
+    public function delete($id)
+    {
 
+     Post:: where ('user_id', $id)->delete();
+
+    }
 }
