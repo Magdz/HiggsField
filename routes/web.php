@@ -11,14 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('Layout.profile');
-});
-
 Route::group(['middleware' => 'guest'], function(){
+
+	Route::get('/', function () {
+	    return view('index');
+	});
+
+	Route::post('/register', [
+		'as' => 'auth.register',
+		'uses' => 'Auth\RegisterController@register'
+	]);
 
 });
 
 Route::group(['middleware' => 'auth'], function(){
-	
+
+	Route::get('/home', [
+		'as' => 'home',
+		'uses' => 'HomeController@index'
+	]);
+
 });

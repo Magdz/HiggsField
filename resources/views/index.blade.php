@@ -26,7 +26,7 @@
         <header>
             <!--Background Image -->
             <div id="body-bg">
-                <img src="images/index-bg.jpg" alt="Share what matters">
+                <img src="{{ URL::asset('/') }}images/index-bg.jpg" alt="Share what matters">
                 
             </div>
             <div id="body-overlay"></div>
@@ -49,13 +49,14 @@
                     </form>
                 </div>
                 <div id="signupContainer" class="hide">
-                    <form id = "signup" method="" class="" action="">
-                        <input type = "text" placeholder = "First Name"></input><br>
-                        <input type = "text" placeholder = "Last Name"></input><br>
-                        <input type = "text" placeholder = "Gender"></input> <br>
-                        <input type = "text" placeholder = "Password"></input> <br>
-                        <input type = "text" placeholder = "Email"></input><br>
-                        <input type = "date" placeholder = "Birth Date" style="color:#A9B0C4"></input><br>
+                    <form id = "signup" method="post" class="" action="{!! route('auth.register') !!}">
+                        <input type = "text" name="firstname" placeholder = "First Name"></input><br>
+                        <input type = "text" name="lastname" placeholder = "Last Name"></input><br>
+                        <input type = "text" name="gender" placeholder = "Gender"></input> <br>
+                        <input type = "email" name="email" placeholder = "Email"></input><br>
+                        <input type = "password" name="password" placeholder = "Password"></input> <br>
+                        <input type = "date" name="birthdate" placeholder = "Birth Date" style="color:#A9B0C4"></input><br>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type = "submit" value = "Sign up">
                     </form>                
                 </div>
