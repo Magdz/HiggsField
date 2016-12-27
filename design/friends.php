@@ -85,7 +85,12 @@
                                     text-align:center">FirstN LastN</h4>
                                 </div>
                                 <div class="row" style="margin-left:auto; bottom: 0px;margin-right:auto;">
-                                    <input type= "submit" value="Add Friend">
+                                    <div class="col-md-6" style="padding-left: 0px; padding-right:0px;">
+                                        <input type= "submit" value="Add Friend" style="background-color:#8BC34A;">
+                                    </div>
+                                    <div class="col-md-6"style="padding-left: 0px; padding-right:0px;">
+                                        <input type= "submit" value="Ignore" style="background-color:#F44336;">
+                                    </div>
                                 </div>
                             </div>
                             <div class='request container'>

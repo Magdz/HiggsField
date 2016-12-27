@@ -42,10 +42,9 @@
     margin-left: 0;
 }
 .request input[type="submit"], .friend input[type="submit"]{
-    background-color: #691A99;   
     color: #e6e6e8;
-    border-style: none;
-    width: 200px;
+    border-style: none;    
+    width: 100px;
     height:30px;
     font-size: 15px;
 }
