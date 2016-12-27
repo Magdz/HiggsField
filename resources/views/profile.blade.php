@@ -31,6 +31,7 @@
                                 </form>
                             </div>
                             <!--USER PAST POSTS-->
+                            @foreach($posts as $post)
                             <div class="row container post-update">
                                 <!--Top Row-->
                                 <div id="top" class="row">
@@ -45,20 +46,19 @@
                                     </div>
                                     <!--Time posted-->
                                     <div style="margin-left:-30px; margin-top:10px; float:right;" class="col-md-2">
-                                        <h6 style="font-weight:bold">3 Hours ago</h6>
+                                        <h6 style="font-weight:bold">{{$post->created_at}} </h6>
                                     </div>
                                 </div>
                                 <!--Text Row-->
                                 <div id="text" style = "margin-top:20px; margin-left:20px; margin-bottom:10px;" class="row">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, vim at denique consequat, postea omnium lobortis duo cu, volumus intellegam dissentiunt ei cum. Ius id utinam facilisis. Est et legimus singulis expetenda. Ad sit mazim corrumpit, ea pri primis facilis nostrum, usu et primis cetero. Nam invenire sapientem ut.
-                                    </p>
+                                    <p>{{ $post->caption }}</p>
                                 </div>
                                 <div id="interaction" class="row">
-                                    <input type="submit" id="like-btn" value = ""></input>
-                                    <input type="submit" id="comment-btn" value = ""></input>
+                                    <input type="submit" id="like-btn" value = "">
+                                    <input type="submit" id="comment-btn" value = "">
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
