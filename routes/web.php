@@ -22,10 +22,19 @@ Route::group(['middleware' => 'guest'], function(){
 		'uses' => 'Auth\RegisterController@register'
 	]);
 
+	Route::post('/login', [
+		'as' => 'auth.login',
+		'uses' => 'Auth\LoginController@login'
+	]);
 
 });
 
 Route::group(['middleware' => 'auth'], function(){
+
+	Route::get('/logout', [
+		'as' => 'auth.logout',
+		'uses' => 'Auth\LoginController@logout'
+	]);
 
 	Route::get('/home', [
 		'as' => 'home',
