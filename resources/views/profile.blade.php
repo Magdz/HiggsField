@@ -54,7 +54,7 @@
                                             placeholder="What's on your mind?" style="padding-top:10px;"></textarea>
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <div class = "row" id="user-action">
-                                            <input type = "submit" style = "position:relative;" value="Post"></input>
+                                            <input type = "submit" style = "position:relative; margin-left:30px;" value="Post"></input>
                                             <input type = "checkbox" name="is_public" <h4 style=" font-size: 13px; text-align:center; font-weight:bold">
                                             Private Post
                                         </h4>
@@ -65,9 +65,12 @@
                             </div>
                             <!--USER PAST POSTS-->
                             @foreach($posts as $post)
-                            <div class="row container post-update">
+                            <div class="row container post-update" style="position:relative;">
                                 <!--Top Row-->
                                 <div id="top" class="row">
+                                    <form action="">
+                                        <input type="submit" id="close-btn" value = ""> 
+                                    </form>
                                     <!--Image-->
                                     <div class="col-md-2">
                                         <div id="thumb-img"></div>
@@ -86,7 +89,7 @@
                                 <div id="text" style = "margin-top:20px; margin-left:20px; margin-bottom:10px;" class="row">
                                     <p>{{ $post->caption }}</p>
                                 </div>
-                                <div id="interaction" class="row">
+                                <div id="interaction" class="row" style="position:absolute; bottom:0; width:100%">
                                     <input type="submit" id="like-btn" value = "">
                                     <input type="submit" id="comment-btn" value = "">
                                 </div>
