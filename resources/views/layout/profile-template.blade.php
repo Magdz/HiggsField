@@ -33,6 +33,9 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
+                <form action="{!! route('auth.logout') !!}">
+                    <input type="submit" id="logout-btn" value="" > 
+                </form>
             </div>
         </nav>
         <div id="links-bar">

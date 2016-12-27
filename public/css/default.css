@@ -96,3 +96,12 @@ body{
     float: right;
     margin-top: 0px;
 }
+#logout-btn{
+    background: url("../images/Exit-Filled.png");
+    background-size: 35px;
+    height:35px;
+    width: 35px;
+    margin-top:7px;
+    float: right;
+    border-style:none;
+}
