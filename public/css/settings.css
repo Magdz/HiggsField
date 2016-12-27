@@ -1,3 +1,4 @@
+
 #leftpane{
     padding-top: 40px;
     position: relative;
@@ -121,4 +122,7 @@ ul.tab li a {
 .selected{
     background-color: #e62739  !important;
     border: 1px solid #e62739  !important;
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: white !important;
 }

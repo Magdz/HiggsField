@@ -1,5 +1,7 @@
 @extends('layout.profile-template')
-
+@section('includes')
+<link rel="stylesheet" href="css/profile.css">
+@stop
 @section('content')
       <div class = "adjust container">
             <div class="row">

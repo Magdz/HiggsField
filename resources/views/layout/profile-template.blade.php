@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="js/bootstrap.min.js">
          <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="css/settings.css">
-        <link rel="stylesheet" href="css/profile.css">
+        @yield('includes')
 </head>
 
 <body>
@@ -35,7 +34,7 @@
                 </form>
             </div>
         </nav>
-            <div id="links-bar">
+        <div id="links-bar">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Profile</a></li>
