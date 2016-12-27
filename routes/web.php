@@ -52,7 +52,12 @@ Route::group(['middleware' => 'auth'], function(){
 
 	Route::get('/settings', [
 		'as' => 'settings',
-		'uses' => 'HomeController@settings'
+		'uses' => 'UsersController@edit'
+	]);
+
+	Route::post('/settings/update', [
+		'as' => 'settings.update',
+		'uses' => 'UsersController@update'
 	]);
 
 	Route::post('/post/save', [

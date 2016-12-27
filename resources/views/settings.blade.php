@@ -10,31 +10,36 @@
                     <li id="optional-li" class="selected"> <a href="#"> Optional </a></li>
         </ul>
         <h4 style="color:white;">Your profile is a few clicks away... </h4>
-        <form id = "optional" class = "show">
-            <input type = "text" class = "inputStyle" placeholder = "Nickname"></input><br>
-            <input type = "text" class = "inputStyle" placeholder = "Phone Number"></input><br>
-            <input type = "text" class = "inputStyle" placeholder = "Hometown" ></input><br>
-            <select class="inputStyle" placeholder = "Marital Status" style="color:white;"><br>
+        <form method="post" action="{!! route('settings.update') !!}">
+        <div id = "optional" class = "show">
+            <input type = "text" class = "inputStyle" placeholder = "Nickname" name="nickname" value="{{ $user->nickname }}"></input><br>
+            <input type = "text" class = "inputStyle" placeholder = "Phone Number" name="phone_number" @if(count($user->phoneNumbers)) value="{{ $user->phoneNumbers->first->phone_number }}" @endif></input><br>
+            <input type = "text" class = "inputStyle" placeholder = "Hometown" name="hometown" value="{{ $user->hometown }}"></input><br>
+            <select class="inputStyle" placeholder = "Marital Status" name="marital_status" value="{{ $user-> marital_status }}" style="color:white;"><br>
                 <option value = "Select">Select</option>
                 <option value = "Single">Single</option>
                 <option value = "Engaged">Engaged</option>
                 <option value = "Married">Married</option>
             </select>
-            <textarea class = "inputStyle" style = "height:70px" placeholder = "Biography" rows= "4" cols= "50"></textarea> <br>
-        </form>
-        <form id = "required" method="" class="hide" action="">
-                <input class= "inputStyle" type = "text" placeholder = "First Name"></input><br>
-                <input class= "inputStyle" type = "text" placeholder = "Last Name"></input><br>
-                <input class= "inputStyle" type = "text" placeholder = "Gender"></input> <br>
-                <input class= "inputStyle" type = "text" placeholder = "Password"></input> <br>
-                <input class= "inputStyle" type = "text" placeholder = "Email"></input><br>
-                <input class= "inputStyle" type = "date" placeholder = "Birth Date" style="color:#A9B0C4"></input><br>
-        </form>  
-        <div class = "bottom-btns">
-            <a href="#" style="font-size:14px; text-decoration: underline;">Later</a>
-        <input class= "addPic2" style= "border: 2px solid #6ed3cf; margin-left:349px" type="submit" value = "Go">
+            <textarea class = "inputStyle" style = "height:70px" placeholder = "Biography" name="about" rows= "4" cols= "50"></textarea> <br>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <div class = "bottom-btns">
+                <a href="#" style="font-size:14px; text-decoration: underline;">Later</a>
+            <input class= "addPic2" style= "border: 2px solid #6ed3cf; margin-left:349px" type="submit" value = "Go">
+            </div>
         </div>
-                        
+        <div id = "required"  class="hide">
+                <input class= "inputStyle" type = "text" placeholder = "First Name" name="firstname" value="{{ $user->firstname }}"></input><br>
+                <input class= "inputStyle" type = "text" placeholder = "Last Name" name="lastname" value="{{ $user->lastname }}"></input><br>
+                <input class= "inputStyle" type = "text" placeholder = "Gender" name="gender" value="{{ $user->gender }}"></input> <br>
+                <input class= "inputStyle" type = "date" placeholder = "Birth Date" name="birthdate" style="color:#A9B0C4" value="{{ $user->birthdate }}"></input><br>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <div class = "bottom-btns">
+                    <a href="#" style="font-size:14px; text-decoration: underline;">Later</a>
+                <input class= "addPic2" style= "border: 2px solid #6ed3cf; margin-left:349px" type="submit" value = "Go">
+                </div>
+        </div> 
+        </form>
     </div>  
     <div id = "picturepane" class = "col-sm-6">
         <img class = "displayed" src="{{ URL::asset('/') }}images/default_profile.jpg"></img>
