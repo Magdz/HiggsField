@@ -14,7 +14,7 @@
 Route::group(['middleware' => 'guest'], function(){
 
 	Route::get('/', function () {
-	    return view('profile');
+	    return view('index');
 	});
 
 	Route::get('/login', function (){
