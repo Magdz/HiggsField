@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('Layout.profile');
 });
+
+Route::group(['middleware' => 'guest'], function(){
+
+});
+
+Route::group(['middleware' => 'auth'], function(){
+	
+});

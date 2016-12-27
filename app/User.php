@@ -41,7 +41,7 @@ class User extends Authenticatable
         return $this->hasMany('App\PhoneNumber', 'user_id');
     }
     
-     public function posts(){
+    public function posts(){
         return $this->hasMany('App\Post', 'user_id');
     }
     
