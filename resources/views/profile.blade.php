@@ -38,6 +38,7 @@
                                     </div>
                                     </a>
 
+                                    <form method="post" action="{!! route('post.save') !!}">
                                     <!--Picture Upload-->
                                     <div id = "status-photo" class = "hide" style="width: 590px; height:160px;
                                                                             margin-bottom:3px; 
@@ -45,18 +46,19 @@
                                                                             text-align:center;
                                                                             padding-top:60px;
                                                                             border: 1px solid #eeeeee;">
-                                        <a href="#" >
-                                            Upload Photos
-                                        </a>
+                                        <input type="file" name="image">
+
                                     </div>
                                     <!--Textarea-->
-                                    <form method="post" action="{!! route('post.save') !!}">
                                         <textarea name="caption" id="status-txt" cols="75" rows="7" 
                                             placeholder="What's on your mind?" style="padding-top:10px;"></textarea>
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <div class = "row" id="user-action">
                                             <input type = "submit" style = "position:relative;" value="Post"></input>
-                                            <input type = "checkbox"></input>
+                                            <input type = "checkbox" name="is_public" <h4 style=" font-size: 13px; text-align:center; font-weight:bold">
+                                            Private Post
+                                        </h4>
+
                                         </div>
                                     </form>
                                 </div>
