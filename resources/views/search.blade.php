@@ -43,7 +43,7 @@
                             <div class="col-md-9" id = "user-info" style="float: left;border-bottom:1px solid #e3e3e3; padding-bottom: 40px; ">
                                 {{$item->firstname}} {{$item->lastname}}<br>
                                 {{$item->nickname}}
-                                @unless($item->id == Auth::id())
+                                @unless($item->id == Auth::id() || App\Helpers\CommonHelper::areFriends(Auth::id(), $item->id))
                                     <input 
                                     type="submit" 
                                     value = "Send Request"
