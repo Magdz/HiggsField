@@ -45,6 +45,16 @@ Route::group(['middleware' => 'auth'], function(){
 		'uses' => 'HomeController@index'
 	]);
 
+	Route::get('/profile', [
+		'as' => 'profile',
+		'uses' => 'HomeController@profile'
+	]);
+
+	Route::get('/settings', [
+		'as' => 'settings',
+		'uses' => 'HomeController@settings'
+	]);
+
 	Route::post('/post/save', [
 		'as'=>'post.save',
 		'uses'=>'PostsController@save'

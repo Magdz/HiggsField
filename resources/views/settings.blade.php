@@ -32,12 +32,12 @@
         </form>  
         <div class = "bottom-btns">
             <a href="#" style="font-size:14px; text-decoration: underline;">Later</a>
-        <input class= "addPic2" style= "border: 2px solid #6ed3cf; margin-left:349px"type="submit" value = "Go">
+        <input class= "addPic2" style= "border: 2px solid #6ed3cf; margin-left:349px" type="submit" value = "Go">
         </div>
                         
     </div>  
     <div id = "picturepane" class = "col-sm-6">
-        <img class = "displayed" src="Images/default_profile.jpg"></img>
+        <img class = "displayed" src="{{ URL::asset('/') }}images/default_profile.jpg"></img>
         <div id = "overlay-img">
             <input class= "addPic" type="submit" value = "">
             <input  style = "width: 100px;border:none; color:white; margin-top: -50px"  class = "inputStyle" type= "text" Value = "User Name">

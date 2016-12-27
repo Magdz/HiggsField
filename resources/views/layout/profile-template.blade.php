@@ -37,9 +37,9 @@
         <div id="links-bar">
             <ul>
                 <li><a href="{!! route('home') !!}">Home</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{!! route('profile') !!}">Profile</a></li>
                 <li><a href="{!! route('friends') !!}">Friends</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a href="{!! route('settings') !!}">Settings</a></li>
             </ul>
         </div>
     
