@@ -23,9 +23,12 @@
                                     Share an Update
                                 </h4>
                                 <!--Textarea-->
-                                <textarea name="" id="status-txt" cols="75" rows="5" 
-                                    placeholder="What's on your mind?" style="padding-top:10px;"></textarea>
-                                <input type = "submit" value="Post"></input>
+                                <form method="post" action="{!! route('post.save') !!}">
+                                    <textarea name="caption" id="status-txt" cols="75" rows="5" 
+                                        placeholder="What's on your mind?" style="padding-top:10px;"></textarea>
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type = "submit" value="Post"></input>
+                                </form>
                             </div>
                             <!--USER PAST POSTS-->
                             <div class="row container post-update">

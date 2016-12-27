@@ -22,6 +22,7 @@ Route::group(['middleware' => 'guest'], function(){
 		'uses' => 'Auth\RegisterController@register'
 	]);
 
+
 });
 
 Route::group(['middleware' => 'auth'], function(){
@@ -29,6 +30,11 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/home', [
 		'as' => 'home',
 		'uses' => 'HomeController@index'
+	]);
+
+	Route::post('/post/save', [
+		'as'=>'post.save',
+		'uses'=>'PostsController@save'
 	]);
 
 });
