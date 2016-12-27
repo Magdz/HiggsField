@@ -13,7 +13,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
         <script src="http://malsup.github.com/jquery.form.js"></script>
     <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/continue.css">
+    <link rel="stylesheet" href="css/settings.css">
     <link rel="stylesheet" href="css/profile.css">
 </head>
 
