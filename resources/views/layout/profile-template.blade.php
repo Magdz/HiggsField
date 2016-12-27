@@ -45,4 +45,5 @@
     
         @yield('content')
 </body>
+<script src="js/action.js"></script>
 </html>

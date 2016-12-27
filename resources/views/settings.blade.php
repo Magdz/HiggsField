@@ -44,5 +44,4 @@
         </div>
     </div>
 </div>
-<script src="js/action.js"></script>
 @stop

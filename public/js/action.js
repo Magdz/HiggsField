@@ -26,3 +26,17 @@ $("#required-li").on("click", function(){
     $("#optional").addClass("hide");
     $("#required").addClass("show");
 });
+$("#textUpdate").on("click", function(){
+    $("#photoUpdateDiv").removeClass("tabSelected");
+    $("#textUpdateDiv").addClass("tabSelected");
+    $("#status-photo").removeClass("show");
+    $("#status-photo").addClass("hide");
+    $("#status-txt").addClass("show");
+});
+$("#photoUpdate").on("click", function(){
+    $("#textUpdateDiv").removeClass("tabSelected");
+    $("#photoUpdateDiv").addClass("tabSelected");
+    $("#status-txt").removeClass("show");
+    $("#status-txt").addClass("hide");
+    $("#status-photo").addClass("show");
+});

@@ -14,18 +14,49 @@
                     <!--MIDDLE POSTS-->
                     <div class="container">
                             <!--FIXED DIV TO WRITE STATUS UPDATE-->
-                                <div id="status-update" class="row">
-                                <!--Share an update button-->
-                                <img></img>
-                                <h4 style="margin-top: auto; margin-bottom:auto; padding-top:10px; font-size: 13px; height:50px;
-                                width: 120px; text-align:center; font-weight:bold;
-                                border-bottom:2px solid #691A99; ">
-                                    Share an Update
-                                </h4>
-                                <!--Textarea-->
-                                <textarea name="" id="status-txt" cols="75" rows="5" 
-                                    placeholder="What's on your mind?" style="padding-top:10px;"></textarea>
-                                <input type = "submit" value="Post"></input>
+                            <div id="status-update" class="row">
+                                <div class = "row">
+                                    <!--Share an update button-->
+                                    <a id = "textUpdate"  href = "#">
+                                        <div id = "textUpdateDiv" class="col-md-3 tabSelected" style="margin-top: auto; 
+                                                                margin-bottom:auto; 
+                                                                padding-top:10px; height:50px;
+                                                                width: 140px; ">
+                                            <h4 style=" font-size: 13px; text-align:center; font-weight:bold">
+                                                Share an Update
+                                            </h4>
+                                        </div>
+                                    </a>
+
+                                    <!--Browse Photo button-->
+                                    <a id = "photoUpdate" href="#">
+                                    <div class="col-md-3" id = "photoUpdateDiv" style="margin-top: auto; margin-bottom:auto; padding-top:10px; height:50px;
+                                        width: 140px;">
+                                        <h4 style=" font-size: 13px; text-align:center; font-weight:bold">
+                                            Share Photo
+                                        </h4>
+                                    </div>
+                                    </a>
+
+                                    <!--Picture Upload-->
+                                    <div id = "status-photo" class = "hide" style="width: 590px; height:160px;
+                                                                            margin-bottom:3px; 
+                                                                            margin-top:50px;
+                                                                            text-align:center;
+                                                                            padding-top:60px;
+                                                                            border: 1px solid #eeeeee;">
+                                        <a href="#" >
+                                            Upload Photos
+                                        </a>
+                                    </div>
+                                    <!--Textarea-->
+                                    <textarea name="" id="status-txt" class = "show" cols="75" rows="7" 
+                                        placeholder="What's on your mind?" style="padding-top:10px; margin-top:10px;"></textarea>
+                                </div>
+                                <div class = "row" id="user-action">
+                                    <input type = "submit" style = "position:relative;" value="Post"></input>
+                                    <input type = "checkbox"></input>
+                                </div>
                             </div>
                             <!--USER PAST POSTS-->
                             <div class="row container post-update">

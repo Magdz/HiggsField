@@ -86,3 +86,6 @@ body{
     margin-top: 5px;
     text-align:center;
 }
+.tabSelected{
+    border-bottom:2px solid #691A99; 
+}

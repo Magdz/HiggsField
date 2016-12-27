@@ -14,7 +14,7 @@
 Route::group(['middleware' => 'guest'], function(){
 
 	Route::get('/', function () {
-	    return view('index');
+	    return view('profile');
 	});
 
 	Route::post('/register', [
