@@ -20,7 +20,7 @@ body{
 }
 #body-overlay{
     position: absolute;
-    height: 682px;
+    height: auto;
     width: 100%;
     top: -20px;
     background-color: rgba(0,0,0,0.3);
@@ -47,11 +47,11 @@ body{
 /*USER ACTION BOX*/
 #header-signupbox{
     position: relative;
-    top: -40px;
+    top: -50px;
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    height: 440px;
+    height: auto;
     width: 500px;
     margin-left: 740px;
     background-color: rgb(245,248,250);
@@ -92,7 +92,11 @@ ul.tab li a {
 #signupContainer{
     top: 20px;
 }
-#signupContainer input[type=text], #signinContainer input[type=text]
+#signupContainer input[type=text],
+input[type=email], 
+input[type=password],
+#signupContainer input[type=date],
+#signinContainer input[type=text]
 {
     border: 2px solid #d3dadf;
     padding-left: 10px;
