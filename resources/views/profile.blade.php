@@ -68,8 +68,9 @@
                             <div class="row container post-update" style="position:relative;">
                                 <!--Top Row-->
                                 <div id="top" class="row">
-                                    <form  method="post" action="{!! route('post.delete',$post->user_id) !!}">
-                                        <input type="submit" id="close-btn" value = ""> 
+                                    <form  method="post" action="{!! route('post.delete', $post->user_id) !!}">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input type="submit" id="close-btn" value=""> 
                                     </form>
                                     <!--Image-->
                                     <div class="col-md-2">

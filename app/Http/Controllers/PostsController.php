@@ -22,18 +22,18 @@ class PostsController extends Controller
     	else
     		$data['is_public']=0;
 
-
-
     	$data['user_id'] = Auth::id();
 
     	Post::create($data);
 
     	return redirect(route('home'));
     }
+
     public function delete($id)
     {
+        $post = Post::findOrFail($id);
+        $post->delete();
 
-     Post:: where ('user_id', $id)->delete();
-
+        return redirect(route('home'));
     }
 }
