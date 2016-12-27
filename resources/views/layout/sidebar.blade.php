@@ -6,10 +6,12 @@
                     <img src=""></img>
                 </div>
                 <!--User Information{Name, Nickname, Age, Gender}-->
+                
                 <div id = "user-info" class="row">
-                    <h4>First Last Name</h4>
-                    <h4 id="Nickname" style="color: rgba(79,79,79,0.8)"> Nickname</h4>
+                    <h4>{{Auth::user()->firstname}} {{Auth::user()->lastname}}</h4>
+                    <h4 id="Nickname" style="color: rgba(79,79,79,0.8)"> {{Auth::user()->lastname}}</h4>
                 </div>
+             
             </div>
         </div>
         <!--{Number of Friends} {Number of Requests}-->

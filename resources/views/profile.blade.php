@@ -41,12 +41,12 @@
                                     </div>
                                     <!--Poster Name-->
                                     <div style="margin-left:-30px; margin-top:10px;"class="col-md-2">
-                                        <h6 style="font-weight:bold">First Last</h6>
-                                        <h6>Nickname</h6>
+                                        <h6 style="font-weight:bold">{{$post->user->firstname}} {{$post->user->lastname}}</h6>
+                                        <h6>{{$post->user->nickname}}</h6>
                                     </div>
                                     <!--Time posted-->
                                     <div style="margin-left:-30px; margin-top:10px; float:right;" class="col-md-2">
-                                        <h6 style="font-weight:bold">{{$post->created_at}} </h6>
+                                        <h6 style="font-weight:bold">{{$post->created_at->diffForHumans()}} </h6>
                                     </div>
                                 </div>
                                 <!--Text Row-->
