@@ -14,7 +14,6 @@
                     <!--MIDDLE POSTS-->
                     <div class="container">
                             <!--FIXED DIV TO WRITE STATUS UPDATE-->
-<<<<<<< HEAD
                             <div id="status-update" class="row">
                                 <div class = "row">
                                     <!--Share an update button-->
@@ -51,30 +50,16 @@
                                         </a>
                                     </div>
                                     <!--Textarea-->
-                                    <textarea name="" id="status-txt" class = "show" cols="75" rows="7" 
-                                        placeholder="What's on your mind?" style="padding-top:10px; margin-top:10px;"></textarea>
+                                    <form method="post" action="{!! route('post.save') !!}">
+                                        <textarea name="caption" id="status-txt" cols="75" rows="7" 
+                                            placeholder="What's on your mind?" style="padding-top:10px;"></textarea>
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <div class = "row" id="user-action">
+                                            <input type = "submit" style = "position:relative;" value="Post"></input>
+                                            <input type = "checkbox"></input>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class = "row" id="user-action">
-                                    <input type = "submit" style = "position:relative;" value="Post"></input>
-                                    <input type = "checkbox"></input>
-                                </div>
-=======
-                                <div id="status-update" class="row">
-                                <!--Share an update button-->
-                                <img></img>
-                                <h4 style="margin-top: auto; margin-bottom:auto; padding-top:10px; font-size: 13px; height:50px;
-                                width: 120px; text-align:center; font-weight:bold;
-                                border-bottom:2px solid #691A99; ">
-                                    Share an Update
-                                </h4>
-                                <!--Textarea-->
-                                <form method="post" action="{!! route('post.save') !!}">
-                                    <textarea name="caption" id="status-txt" cols="75" rows="5" 
-                                        placeholder="What's on your mind?" style="padding-top:10px;"></textarea>
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input type = "submit" value="Post"></input>
-                                </form>
->>>>>>> origin/master
                             </div>
                             <!--USER PAST POSTS-->
                             @foreach($posts as $post)
