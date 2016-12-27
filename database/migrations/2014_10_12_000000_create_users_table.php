@@ -33,14 +33,17 @@ class CreateUsersTable extends Migration
         Schema::create('phones_users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('phone_number');
-            $table->string('user_id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
 
         Schema::create('friends_users', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('friend_id');
-            $table->integer('user_id');
+            $table->integer('friend_id')->unsigned();
+            $table->foreign('friend_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('state');
             $table->timestamps();
         });
