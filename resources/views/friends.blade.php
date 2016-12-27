@@ -16,7 +16,7 @@
                         <div>
                             <!--FRIEND REQUESTS-->
                             @foreach($friendRequests as $request)
-                            <div class='request container'>
+                            <div class='request container' style="position:relative;">
                                 <div class="row" style="margin-left:auto; margin-right:auto;">
                                     <img 
                                     src="images/default_profile.jpg"
@@ -28,11 +28,19 @@
                                     <h4 style="font-size:14px;
                                     text-align:center">{{$request->firstname}} {{$request->lastname}}</h4>
                                 </div>
-                                <div class="row" style="margin-left:auto; bottom: 0px;margin-right:auto;">
-                                    <input type= "submit" value="Add Friend">
+                                <div class="row" style="margin-left:auto; bottom: 0px;
+                                                        margin-right:auto;
+                                                        position:absolute;">
+                                    <div class="col-md-6" style="padding-left: 0px; padding-right:0px;">
+                                        <input type= "submit" value="Add Friend" style="background-color:#8BC34A;">
+                                    </div>
+                                    <div class="col-md-6"style="padding-left: 0px; padding-right:0px;">
+                                        <input type= "submit" value="Ignore" style="background-color:#F44336;">
+                                    </div>
                                 </div>
                             </div>
                             @endforeach
+                            
                         </div>
                     </div>
                     <div class="row">
