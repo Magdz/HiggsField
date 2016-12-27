@@ -19,4 +19,8 @@ class FriendsUsers extends Model
         'user_id',
         'state',
     ];
+
+    public function user(){
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }

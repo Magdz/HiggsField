@@ -44,13 +44,16 @@
                                 {{$item->firstname}} {{$item->lastname}}<br>
                                 {{$item->nickname}}
                                 @unless($item->id == Auth::id() || App\Helpers\CommonHelper::areFriends(Auth::id(), $item->id))
-                                    <input 
-                                    type="submit" 
-                                    value = "Send Request"
-                                    style = "border-radius: 60px; height: 35px; width: 120px;
-                                    margin-top: -15px;
-                                    color: #691A99;
-                                    background-color: transparent; float:right; border: 3px solid #691A99">
+                                    <form method="post" action="{!! route('friend.request', $item->id) !!}">
+                                        <input 
+                                        type="submit" 
+                                        value = "Send Request"
+                                        style = "border-radius: 60px; height: 35px; width: 120px;
+                                        margin-top: -15px;
+                                        color: #691A99;
+                                        background-color: transparent; float:right; border: 3px solid #691A99">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    </form>
                                 @endunless
                             </div>   
                         </div>

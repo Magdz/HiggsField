@@ -21,7 +21,7 @@
         <!--{Number of Friends} {Number of Requests}-->
         <div id = "connections" class="row" >
             <div class="col-md-6 white-box "style="padding-top:18px; height:70px; width: 135px;">
-                <h4 style="font-size: 15px">{{count(Auth::user()->friends())}} Friends</h4>
+                <h4 style="font-size: 15px">{{count(Auth::user()->friends)}} Friends</h4>
             </div> 
             <div class="col-md-6 white-box" style="padding-top:18px; height:70px; width: 135px; margin-left:10px;">
                 <h4 style="font-size: 15px; ">{{count(Auth::user()->requests)}} Requests</h4>

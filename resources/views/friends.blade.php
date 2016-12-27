@@ -26,16 +26,22 @@
                                 <div class="row" style="margin-left:auto;
                                  margin-right:auto; margin-bottom:10px;">
                                     <h4 style="font-size:14px;
-                                    text-align:center">{{$request->firstname}} {{$request->lastname}}</h4>
+                                    text-align:center">{{$request->user->firstname}} {{$request->user->lastname}}</h4>
                                 </div>
                                 <div class="row" style="margin-left:auto; bottom: 0px;
                                                         margin-right:auto;
                                                         position:absolute;">
                                     <div class="col-md-6" style="padding-left: 0px; padding-right:0px;">
-                                        <input type= "submit" value="Add Friend" style="background-color:#8BC34A;">
+                                        <form method="post" action="{!! route('request.accept', $request->user_id) !!}" >
+                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                            <input type= "submit" value="Add Friend" style="background-color:#8BC34A;">
+                                        </form>
                                     </div>
                                     <div class="col-md-6"style="padding-left: 0px; padding-right:0px;">
-                                        <input type= "submit" value="Ignore" style="background-color:#F44336;">
+                                        <form method="post" action="{!! route('request.reject', $request->user_id) !!}" >
+                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                            <input type= "submit" value="Ignore" style="background-color:#F44336;">
+                                        </form>
                                     </div>
                                 </div>
                             </div>

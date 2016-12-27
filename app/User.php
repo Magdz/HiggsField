@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use App\FriendsUsers;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -50,7 +52,7 @@ class User extends Authenticatable
     }
 
     public function requests(){
-        return $this->belongsToMany('App\User', 'friends_users', 'user_id', 'friend_id')->where('state', '0');
+        return $this->hasMany('App\FriendsUsers', 'friend_id')->where('state', '0');
     }
 
 }

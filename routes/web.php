@@ -69,6 +69,21 @@ Route::group(['middleware' => 'auth'], function(){
 		'as' => 'friends',
 		'uses' => 'FriendsController@index'
 	]);
+
+	Route::post('/friend/{id}/request', [
+		'as' => 'friend.request',
+		'uses' => 'FriendsController@request'
+	]);
+
+	Route::post('/request/{id}/accept', [
+		'as' => 'request.accept',
+		'uses' => 'FriendsController@accept'
+	]);
+
+	Route::post('/request/{id}/reject', [
+		'as' => 'request.reject',
+		'uses' => 'FriendsController@reject'
+	]);
 	
 	Route::post('/search',[
 		'as' => 'search',
