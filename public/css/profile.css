@@ -107,10 +107,3 @@
     margin-left:20px;
     margin-top: 13px;
 }
-#close-btn{
-    background: url("../images/close-btn.png");
-    background-size: 25px;
-    background-repeat:no-repeat;
-    float: right;
-    margin-top: 0px;
-}

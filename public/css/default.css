@@ -89,3 +89,10 @@ body{
 .tabSelected{
     border-bottom:2px solid #691A99; 
 }
+#close-btn{
+    background: url("../images/close-btn.png");
+    background-size: 25px;
+    background-repeat:no-repeat;
+    float: right;
+    margin-top: 0px;
+}

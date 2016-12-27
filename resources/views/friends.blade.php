@@ -49,6 +49,9 @@
                         @foreach($friends as $friend)
                         <a href="">
                         <div class="col-md-3 friend" style="padding-top:10px;">
+                            <form action="">
+                                <input type="submit" id="close-btn" value = "" style="float: left;margin-top: -7px;"> 
+                            </form>
                              <img src="images/default_profile.jpg"
                                     style="height: 100px; width: auto;
                                     padding-left:50px;">
