@@ -1,6 +1,6 @@
 @extends('layout.profile-template')
 @section('includes')
-<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="{{ URL::asset('/') }}css/profile.css">
 @stop
 @section('content')
       <div class = "adjust container">

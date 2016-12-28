@@ -8,11 +8,11 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
         <script src="http://malsup.github.com/jquery.form.js"></script>
          <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="js/bootstrap.min.js">
+        <link rel="stylesheet" href="{{ URL::asset('/') }}css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ URL::asset('/') }}css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{{ URL::asset('/') }}js/bootstrap.min.js">
          <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="{{ URL::asset('/') }}css/default.css">
         @yield('includes')
 </head>
 
