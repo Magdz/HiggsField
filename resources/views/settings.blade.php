@@ -13,7 +13,11 @@
         <h4 style="color:white;">Your profile is a few clicks away... </h4>
         <div id = "optional" class = "show">
             <input type = "text" class = "inputStyle" placeholder = "Nickname" name="nickname" value="{{ $user->nickname }}"><br>
-            <input type = "text" class = "inputStyle" placeholder = "Phone Number" name="phone_number" @if(count($user->phoneNumbers)) value="{{ $user->phoneNumbers->first->phone_number }}" @endif><br>
+            <!--PHONENUMBERS-->
+            <div id="pnumber">
+                <input type = "text" class = "inputStyle" placeholder = "Phone Number" name="phone_number[]" @if(count($user->phoneNumbers)) value="{{ $user->phoneNumbers->first->phone_number }}" @endif></th>
+                <a id = "add-btn" href="#"></a></th>
+            </div>
             <input type = "text" class = "inputStyle" placeholder = "Hometown" name="hometown" value="{{ $user->hometown }}"><br>
             <select class="inputStyle" placeholder = "Marital Status" name="marital_status" value="{{ $user-> marital_status }}" style="color:white;"><br>
                 <option value = "Select">Select</option>

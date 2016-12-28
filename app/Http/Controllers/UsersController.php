@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Helpers\Helper;
+use App\PhoneNumber;
 
 class UsersController extends Controller
 {
@@ -22,9 +23,13 @@ class UsersController extends Controller
             // 'profile_picture' => 'image',
         ];
         $this->validate($request, $rules);
-
+        $user = Auth::user();
+        foreach ($request->phone_number as $number):
+            $data['user_id'] = Auth::id();
+            $data['phone_number'] = $number;
+            PhoneNumber::create($data);
+        endforeach;
         $data = $request->all();
-        
         if($request->hasFile('profile_picture'))
         {
             $file = Helper::upload($request->file('profile_picture'), 'profile');

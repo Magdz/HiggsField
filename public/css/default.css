@@ -110,3 +110,12 @@ body{
     float: right;
     border-style:none;
 }
+#add-btn{
+    background: url("../images/add-btn.png");
+    background-size: 35px;
+    height:35px;
+    width: 35px;
+    margin-top:22px;
+    float: right;
+    border-style:none;
+}

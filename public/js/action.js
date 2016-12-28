@@ -40,3 +40,7 @@ $("#photoUpdate").on("click", function(){
     $("#status-txt").addClass("hide");
     $("#status-photo").addClass("show");
 });
+$("#add-btn").on("click",function(){
+    $("#pnumber").append('<input type = "text" class = "inputStyle" placeholder = "Phone Number" name="phone_number[]">');
+    console.log('done');
+});
