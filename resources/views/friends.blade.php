@@ -53,12 +53,13 @@
                         <h2 style="margin-left: 57px;margin-top:30px;">Friends List:</h4>
                         <!--FRIENDS-->
                         @foreach($friends as $friend)
-                        <a href="">
                         <div class="col-md-3 friend" style="padding-top:10px;">
                             <form method="post" action="{!! route('friend.remove', $friend->id) !!}">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="submit" id="close-btn" value = "" style="float: left;margin-top: -7px;"> 
                             </form>
+                            <a href="{!! route('user', $friend->id) !!}">
+                            <div>
                              <img src="images/default_profile.jpg"
                                     style="height: 100px; width: auto;
                                     padding-left:50px;">
@@ -67,6 +68,8 @@
                                     <h4 style="font-size:14px;
                                     text-align:center">{{$friend->firstname}} {{$friend->lastname}}</h4>
                                 </div>
+                            </div>
+                            </a>                             
                         </div>
                         @endforeach
                         </a>

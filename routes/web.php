@@ -49,6 +49,11 @@ Route::group(['middleware' => 'auth'], function(){
 		'as' => 'profile',
 		'uses' => 'HomeController@profile'
 	]);
+	
+	Route::get('/user/{id}', [
+		'as' => 'user',
+		'uses' => 'HomeController@user'
+	]);
 
 	Route::get('/settings', [
 		'as' => 'settings',

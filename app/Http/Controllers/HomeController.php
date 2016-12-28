@@ -33,7 +33,12 @@ class HomeController extends Controller
 
     public function profile(){
     	$user_id = Auth::id();
-        $posts = Post::where('user_id', $user_id)->latest()->get();
+      $posts = Post::where('user_id', $user_id)->latest()->get();
     	return view('profile', compact('posts'));
+    }
+
+    public function user($id){
+      $posts = Post::where('user_id', $id)->latest()->get();
+      return view('profile', compact('posts'));
     }
 }
