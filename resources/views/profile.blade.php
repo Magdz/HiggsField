@@ -69,7 +69,7 @@
                                 <!--Top Row-->
                                 <div id="top" class="row">
                                     @if($post->user_id == Auth::id())
-                                    <form  method="post" action="{!! route('post.delete', $post->user_id) !!}">
+                                    <form  method="post" action="{!! route('post.delete', $post->id) !!}">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" id="close-btn" value=""> 
                                     </form>
