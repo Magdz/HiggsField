@@ -4,7 +4,8 @@
                 <!--Profile Picture-->
                 <div id = "profile-pic" class="white-box row">
                     @if(Auth::user()->profile_picture)
-                        <img src="{{ Auth::user()->profile_picture }}">
+                        <img src="{{ Auth::user()->profile_picture }}" 
+                        style = "width:100px; height:100px; border-radius:100px;">
                     @else
                         <img src="{{ URL::asset('/') }}images/default_profile.jpg">
                     @endif
