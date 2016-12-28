@@ -42,4 +42,12 @@ class FriendsController extends Controller
 
     	return redirect(route('friends'));
     }
+
+    public function remove($id){
+    	$current_id = Auth::id();
+    	$friends_users = FriendsUsers::where('user_id', $id)->where('friend_id', $current_id)->get()->first()->delete();
+    	$friends_users = FriendsUsers::where('user_id', $current_id)->where('friend_id', $id)->get()->first()->delete();
+
+    	return redirect(route('friends'));
+    }
 }

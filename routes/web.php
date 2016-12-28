@@ -89,6 +89,11 @@ Route::group(['middleware' => 'auth'], function(){
 		'as' => 'request.reject',
 		'uses' => 'FriendsController@reject'
 	]);
+
+	Route::post('/friend/{id}/remove', [
+		'as' => 'friend.remove',
+		'uses' => 'FriendsController@remove'
+	]);
 	
 	Route::post('/search',[
 		'as' => 'search',

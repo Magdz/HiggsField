@@ -55,7 +55,8 @@
                         @foreach($friends as $friend)
                         <a href="">
                         <div class="col-md-3 friend" style="padding-top:10px;">
-                            <form action="">
+                            <form method="post" action="{!! route('friend.remove', $friend->id) !!}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="submit" id="close-btn" value = "" style="float: left;margin-top: -7px;"> 
                             </form>
                              <img src="images/default_profile.jpg"
