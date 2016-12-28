@@ -99,4 +99,8 @@ Route::group(['middleware' => 'auth'], function(){
 		'as' => 'search',
 		'uses'=> 'SearchController@search'
 	]);
+	Route::post('/search/filter',[
+		'as' => 'searchFilter',
+		'uses'=> 'SearchController@filter'
+	]);
 });
