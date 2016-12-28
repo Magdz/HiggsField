@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
+use App\Helpers\Helper;
 
 class PostsController extends Controller
 {
@@ -23,6 +24,14 @@ class PostsController extends Controller
     		$data['is_public']=0;
 
     	$data['user_id'] = Auth::id();
+
+		if($request->hasFile('image'))
+        {
+            $file = Helper::upload($request->file('image'), 'posts');
+            $data['image'] = $file['url'];
+            
+        }
+
 
     	Post::create($data);
 

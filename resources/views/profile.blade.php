@@ -75,8 +75,15 @@
                                     </form>
                                     @endif
                                     <!--Image-->
-                                    <div class="col-md-2">
-                                        <div id="thumb-img"></div>
+                                     <div id="thumb-img">
+                                            <div id = "image" class="row">
+                                                @if($post->image)
+                                                 <img src="{ post->image }">
+                                                 <img src="{ asset(post->image) }" >
+                                                 <form method="post" action="{!! route('post.save') !!}">
+                                                 
+                                                 @endif
+                                        </div>
                                     </div>
                                     <!--Poster Name-->
                                     <div style="margin-left:-30px; margin-top:10px;" class="col-md-2">
