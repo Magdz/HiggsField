@@ -39,12 +39,12 @@ class CreateUsersTable extends Migration
         });
 
         Schema::create('friends_users', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('friend_id')->unsigned();
             $table->foreign('friend_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('state');
-            $table->primary(array('user_id', 'friend_id'));
             $table->timestamps();
         });
     }

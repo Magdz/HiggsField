@@ -68,16 +68,18 @@
                             <div class="row container post-update" style="position:relative;">
                                 <!--Top Row-->
                                 <div id="top" class="row">
+                                    @if($post->user_id == Auth::id())
                                     <form  method="post" action="{!! route('post.delete', $post->user_id) !!}">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" id="close-btn" value=""> 
                                     </form>
+                                    @endif
                                     <!--Image-->
                                     <div class="col-md-2">
                                         <div id="thumb-img"></div>
                                     </div>
                                     <!--Poster Name-->
-                                    <div style="margin-left:-30px; margin-top:10px;"class="col-md-2">
+                                    <div style="margin-left:-30px; margin-top:10px;" class="col-md-2">
                                         <h6 style="font-weight:bold">{{$post->user->firstname}} {{$post->user->lastname}}</h6>
                                         <h6>{{$post->user->nickname}}</h6>
                                     </div>

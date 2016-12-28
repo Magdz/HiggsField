@@ -26,8 +26,12 @@ class FriendsController extends Controller
     public function accept($id){
     	$friends_users = Auth::user()->requests()->where('user_id', $id)->get()->first();
     	$friends_users['state'] = '1';
-    	dd($friends_users);
-    	$friends_users->update();
+    	$friends_users->save();
+
+    	$data['user_id'] = Auth::id();
+    	$data['friend_id'] = $id;
+    	$data['state'] = '1';
+    	FriendsUsers::create($data);
 
     	return redirect(route('friends'));
     }
