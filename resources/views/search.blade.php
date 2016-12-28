@@ -38,8 +38,14 @@
                         <!--{People Results}-->
                         @foreach($user_result as $item)
                         <!--RESULT 1-->
+                        <a href="{!! route('user', $item->id) !!}">
                         <div class="row" id = "" style="margin-top: 20px; margin-bottom:20px; padding-bottom: 10px;">
-                            <div class="col-md-3" id = "user-pic" style="margin-left:20px;border-radius:60px; width:60px; height:60px; background-color:#6ed3cf;">
+                            <div id = "profile-pic" class="white-box row" style="float: left; height: 50px; width:50px; border-radius: 50px; " >
+                                @if($item->profile_picture)
+                                    <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ $item->profile_picture }}">
+                                @else
+                                    <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ URL::asset('/') }}images/default_profile.jpg">
+                                @endif
                             </div>
                             <div class="col-md-9" id = "user-info" style="float: left;border-bottom:1px solid #e3e3e3; padding-bottom: 40px; ">
                                 {{$item->firstname}} {{$item->lastname}}<br>
@@ -58,6 +64,7 @@
                                 @endunless
                             </div>   
                         </div>
+                        </a>
                         @endforeach
 
                         <div class="row" id="" style="border-bottom:1px solid #e3e3e3;">
@@ -71,12 +78,16 @@
                         <!--{Post Results}-->
                         @foreach($post_result as $item)
                         <!--RESULT 1-->
-                        <div class="row" id = "" style="margin-top: 20px; margin-bottom:20px; padding-bottom: 10px; border-bottom:1px solid #e3e3e3;">
-                            <div class="col-md-2" id = "user-pic" style="margin-left:20px;border-radius:60px; width:60px; height:60px; background-color:#6ed3cf;">
+                        <div id = "profile-pic" class="white-box row" style="float: left; height: 50px; width:50px; border-radius: 50px; " >
+                                @if($item->user->profile_picture)
+                                    <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ $item->user->profile_picture }}">
+                                @else
+                                    <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ URL::asset('/') }}images/default_profile.jpg">
+                                @endif
                             </div>
-                            <div class="col-md-2" id = "user-info" style="float: left; padding-bottom: 40px; ">
-                                {{Auth::user()->firstname}} {{Auth::user()->lastname}}<br>
-                                {{Auth::user()->nickname}}
+                                <div class="col-md-2" id = "user-info" style="float: left; padding-bottom: 40px; ">
+                                {{$item->user->firstname}} {{$item->user->lastname}}<br>
+                                {{$item->user->nickname}}
                             </div>
                             <div class="col-md-8" style="padding-top:10px;">
                                 <p>

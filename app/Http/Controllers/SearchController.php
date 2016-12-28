@@ -18,7 +18,7 @@ class SearchController extends Controller
       $data = $request->all();
       $query = $data['querydata'];
       $user_result = User::where('firstname', $query)->orWhere('lastname',$query)->orWhere('email',$query)->orWhere('hometown',$query)->get();
-      $post_result = Post::where('user_id',Auth::user()->id)->where('caption','LIKE', '%'.$query.'%')->get();
+      $post_result = Post::where('caption','LIKE', '%'.$query.'%')->get();
       return view('search', compact('post_result','user_result'));
     }
 

@@ -69,9 +69,14 @@
                             <div class="row container post-update" style="position:relative;">
                                 <!--Top Row-->
                                 <div id="top" class="row">
-                                    <div class="col-md-2">
-                                        <div id="thumb-img"></div>
-                                    </div>
+                                    <div id = "profile-pic" class="white-box row" style="float: left; height: 50px; width:50px; border-radius: 50px; " >
+                                @if(Auth::user()->profile_picture)
+                                    <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ Auth::user()->profile_picture }}">
+                                @else
+                                    <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ URL::asset('/') }}images/default_profile.jpg">
+                                @endif
+                            </div>
+                        
                                     @if($post->user_id == Auth::id())
                                     <form  method="post" action="{!! route('post.delete', $post->id) !!}">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
