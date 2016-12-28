@@ -70,8 +70,8 @@
                                 <!--Top Row-->
                                 <div id="top" class="row">
                                     <div id = "profile-pic" class="white-box row" style="float: left; height: 50px; width:50px; border-radius: 50px; " >
-                                @if(Auth::user()->profile_picture)
-                                    <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ Auth::user()->profile_picture }}">
+                                @if($post->user->profile_picture)
+                                    <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ $post->user->profile_picture }}">
                                 @else
                                     <img style = "height: 50px; width:50px; border-radius: 50px;" src="{{ URL::asset('/') }}images/default_profile.jpg">
                                 @endif
