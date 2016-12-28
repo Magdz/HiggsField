@@ -29,7 +29,7 @@
         </div>
 
         <div id = "profile-info" class="row" style="margin-top:10px;">
-            <div class="white-box "style="text-align:left; padding-left:10px; padding-top:10px;">
+            <div class="white-box "style="text-align:left; padding-left:10px; padding-top:10px; padding-bottom:10px;">
                 <h4>Profile Info: </h4>
                     <h5><span style="font-weight:bold">Email:</span> {{Auth::user()->email}}</h5>
                     <h5><span style="font-weight:bold">Gender:</span>  {{Auth::user()->gender}}</h5>
