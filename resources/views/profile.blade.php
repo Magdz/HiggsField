@@ -39,6 +39,7 @@
                                     </a>
 
                                     <form enctype="multipart/form-data" method="post" action="{!! route('post.save') !!}">
+                                    
                                     <!--Picture Upload-->
                                     <div id = "status-photo" class = "hide" style="width: 590px; height:160px;
                                                                             margin-bottom:3px; 
@@ -68,20 +69,15 @@
                             <div class="row container post-update" style="position:relative;">
                                 <!--Top Row-->
                                 <div id="top" class="row">
+                                    <div class="col-md-2">
+                                        <div id="thumb-img"></div>
+                                    </div>
                                     @if($post->user_id == Auth::id())
                                     <form  method="post" action="{!! route('post.delete', $post->id) !!}">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" id="close-btn" value=""> 
                                     </form>
                                     @endif
-                                    <!--Image-->
-                                     <div id="thumb-img">
-                                        <div id = "image" class="row">
-                                            @if($post->image)
-                                                <img src="{{ $post->image }}">
-                                            @endif
-                                        </div>
-                                    </div>
                                     <!--Poster Name-->
                                     <div style="margin-left:-30px; margin-top:10px;" class="col-md-2">
                                         <h6 style="font-weight:bold">{{$post->user->firstname}} {{$post->user->lastname}}</h6>
@@ -94,15 +90,24 @@
                                 </div>
                                 <!--Text Row-->
                                 <div id="text" style = "margin-top:20px; margin-left:20px; margin-bottom:10px;" class="row">
-                                    <p>{{ $post->caption }}</p>
-                                </div>
-                                <div id="interaction" class="row" style="position:absolute; bottom:0; width:100%">
+                                    <p style = "position:relative; margin-bottom:55px;">
+                                        {{ $post->caption }}
+                                    </p>
+                                     <!--Image-->
+                                        <div id = "image" class="row">
+                                            @if($post->image)
+                                                <img src="{{ $post->image }}">
+                                            @endif
+                                        </div>
+                                    </div>
+                                <div id="interaction" class="row" style="position:absolute; ;bottom:0; width:100%">
                                     <input type="submit" id="like-btn" value = "">
                                     <input type="submit" id="comment-btn" value = "">
                                 </div>
                             </div>
                             @endforeach
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

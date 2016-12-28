@@ -61,7 +61,7 @@
 .post-update{
     background-color:white;
     box-shadow: 1px 1px 0px 1px rgba(79,79,79,0.1);
-    height: 250px;
+    height: auto;
     width: 600px;
     position:relative;
     margin-top:20px;
@@ -113,4 +113,13 @@
     background-repeat:no-repeat;
     float: right;
     margin-top: 0px;
+}
+#image img{
+    max-height:200px;
+    height: auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:40px;
+    margin-top:0px;
+    display:block;
 }
