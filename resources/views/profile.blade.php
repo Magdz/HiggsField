@@ -38,7 +38,7 @@
                                     </div>
                                     </a>
 
-                                    <form method="post" action="{!! route('post.save') !!}">
+                                    <form enctype="multipart/form-data" method="post" action="{!! route('post.save') !!}">
                                     <!--Picture Upload-->
                                     <div id = "status-photo" class = "hide" style="width: 590px; height:160px;
                                                                             margin-bottom:3px; 
@@ -76,13 +76,10 @@
                                     @endif
                                     <!--Image-->
                                      <div id="thumb-img">
-                                            <div id = "image" class="row">
-                                                @if($post->image)
-                                                 <img src="{ post->image }">
-                                                 <img src="{ asset(post->image) }" >
-                                                 <form method="post" action="{!! route('post.save') !!}">
-                                                 
-                                                 @endif
+                                        <div id = "image" class="row">
+                                            @if($post->image)
+                                                <img src="{{ $post->image }}">
+                                            @endif
                                         </div>
                                     </div>
                                     <!--Poster Name-->

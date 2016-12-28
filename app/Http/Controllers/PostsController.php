@@ -32,7 +32,6 @@ class PostsController extends Controller
             
         }
 
-
     	Post::create($data);
 
     	return redirect(route('home'));
