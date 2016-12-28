@@ -53,7 +53,11 @@
                     <form id = "signup" method="post" class="" action="{!! route('auth.register') !!}">
                         <input type = "text" name="firstname" placeholder = "First Name"></input><br>
                         <input type = "text" name="lastname" placeholder = "Last Name"></input><br>
-                        <input type = "text" name="gender" placeholder = "Gender"></input> <br>
+                        <select placeholder = "Gender" name="gender" style=""><br>
+                            <option value = "Select">Select</option>
+                            <option value = "Male">Male</option>
+                            <option value = "Female">Female</option>
+                        </select>
                         <input type = "email" name="email" placeholder = "Email"></input><br>
                         <input type = "password" name="password" placeholder = "Password"></input> <br>
                         <input type = "date" name="birthdate" placeholder = "Birth Date" style="color:#A9B0C4"></input><br>

@@ -36,6 +36,7 @@
                     <h5><span style="font-weight:bold">Birthday:</span>  {{Auth::user()->birthdate}}</h5>
                     <h5><span style="font-weight:bold">Hometown:</span>  {{Auth::user()->hometown}}</h5>
                     <h5><span style="font-weight:bold">Marital Status:</span>  {{Auth::user()->marital_status}}</h5>
+                    <h5><span style="font-weight:bold">Bio:</span>  {{Auth::user()->about}}</h5>
             </div>  
         </div>
 </div>

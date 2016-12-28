@@ -96,7 +96,8 @@ ul.tab li a {
 input[type=email], 
 input[type=password],
 #signupContainer input[type=date],
-#signinContainer input[type=text]
+#signinContainer input[type=text],
+select
 {
     border: 2px solid #d3dadf;
     padding-left: 10px;
@@ -109,11 +110,12 @@ input[type=password],
 #signinContainer {
     padding-top: 50px;
 }
-#signinContainer input[type=text]
+#signinContainer input[type=text],
 {
     margin-top: 20px;
 }
-#signupContainer input[type=submit], #signinContainer input[type=submit]
+#signupContainer input[type=submit], 
+#signinContainer input[type=submit]
 {
     background-color: #6ed3cf;   
     color: #fff;

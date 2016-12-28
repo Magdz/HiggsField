@@ -13,7 +13,7 @@
                         <div>
                             <h4 style="font-weight:14px; margin-bottom:-5px;">Filter Search</h4> <br>
                         </div>
-                        <form id = "filter-search" method = "post"  action="{!! route('searchFilter') !!}">
+                        <form id = "filter-search" method = "post"  action="">
                             <h5 style="font-weight:bold;">First Name:</h5><input name = "firstname" type="text" placeholder="First Name"><br><br>
                             <h5 style="font-weight:bold;">Last Name:</h5><input name = "lastname" type="text" placeholder="Last Name"><br><br>
                             <h5 style="font-weight:bold;">Email:</h5><input name = "Email" type="text" placeholder="Email"><br><br>
